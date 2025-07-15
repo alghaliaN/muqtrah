@@ -13,6 +13,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/welcom', function () {
     return view('welcome');
 });
+Route::get('/home', function () {
+    return view('home');
+});
+//path for the controller:
+   use App\Http\Controllers\UserController;
+
+
+Route::get('/about/{name}', function ($name) {
+    
+    return view('about', ["name" =>$name]);
+});
+//for the controller
+route::get('user', [UserController ::class, 'getUser']);
+route::get('about', [UserController ::class, 'abouttUser']);
