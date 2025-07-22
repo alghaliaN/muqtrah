@@ -9,7 +9,7 @@ class UserController extends Controller
     //
     function getUser(){
 
-        //return"this is my name";
+        return"this is my name";
 
         return view('user');
     }
